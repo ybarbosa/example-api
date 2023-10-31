@@ -15,5 +15,5 @@ app
   .use(router.routes())
   .use(router.allowedMethods())
   .listen(process.env.PORT || 3000, () => {
-    console.log(`Listening on http://localhost:${process.env.PORT}`)
+    console.log('Listening on http://localhost:3000')
   })
