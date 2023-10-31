@@ -1,0 +1,18 @@
+version: '3.8'
+
+networks:
+  default:
+    name: 'teste-sqs'
+
+services:
+  api:
+    build:
+      context: .
+      target: API
+    image: api
+    volumes:
+      - ./src:/app/src
+      - ./package.json:/app/package.json
+    command: npm start
+    ports:
+      - 3000: 3000
